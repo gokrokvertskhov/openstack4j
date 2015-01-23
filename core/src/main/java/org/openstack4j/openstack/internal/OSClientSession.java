@@ -12,6 +12,7 @@ import org.openstack4j.api.heat.HeatService;
 import org.openstack4j.api.identity.EndpointURLResolver;
 import org.openstack4j.api.identity.IdentityService;
 import org.openstack4j.api.image.ImageService;
+import org.openstack4j.api.murano.MuranoService;
 import org.openstack4j.api.networking.NetworkingService;
 import org.openstack4j.api.storage.BlockStorageService;
 import org.openstack4j.api.storage.ObjectStorageService;
@@ -283,5 +284,13 @@ public class OSClientSession implements OSClient, EndpointTokenProvider {
     @Override
     public ObjectStorageService objectStorage() {
         return Apis.get(ObjectStorageService.class);
+    }
+    
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public MuranoService murano() {
+        return Apis.get(MuranoService.class);
     }
 }

@@ -11,6 +11,7 @@ public enum ServiceType {
 	EC2("ec2", "ec2"),
 	TELEMETRY("ceilometer", "metering"),
 	ORCHESTRATION("heat", "orchestration"),
+	APPLICATION_CATALOG("murano", "application-catalog"),
 	UNKNOWN("NA", "NA")
 	;
 	

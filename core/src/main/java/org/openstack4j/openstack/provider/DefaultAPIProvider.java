@@ -33,6 +33,9 @@ import org.openstack4j.api.identity.ServiceManagerService;
 import org.openstack4j.api.identity.TenantService;
 import org.openstack4j.api.identity.UserService;
 import org.openstack4j.api.image.ImageService;
+import org.openstack4j.api.murano.EnvironmentService;
+import org.openstack4j.api.murano.MuranoService;
+import org.openstack4j.api.murano.PackagesService;
 import org.openstack4j.api.networking.NetFloatingIPService;
 import org.openstack4j.api.networking.NetworkService;
 import org.openstack4j.api.networking.NetworkingService;
@@ -51,6 +54,9 @@ import org.openstack4j.api.storage.ObjectStorageObjectService;
 import org.openstack4j.api.storage.ObjectStorageService;
 import org.openstack4j.api.telemetry.MeterService;
 import org.openstack4j.api.telemetry.TelemetryService;
+import org.openstack4j.murano.internal.EnvironmentServiceImpl;
+import org.openstack4j.murano.internal.MuranoServiceImpl;
+import org.openstack4j.murano.internal.PackagesServiceImpl;
 import org.openstack4j.openstack.compute.internal.ComputeFloatingIPServiceImpl;
 import org.openstack4j.openstack.compute.internal.ComputeImageServiceImpl;
 import org.openstack4j.openstack.compute.internal.ComputeSecurityGroupServiceImpl;
@@ -163,6 +169,9 @@ public class DefaultAPIProvider implements APIProvider {
 		bind(FloatingIPDNSDomainService.class, FloatingIPDNSDomainServiceImpl.class);
 		bind(FloatingIPDNSEntryService.class, FloatingIPDNSEntryServiceImpl.class);
 		bind(HostAggregateService.class,HostAggregateServiceImpl.class);
+		bind(MuranoService.class, MuranoServiceImpl.class);
+		bind(EnvironmentService.class, EnvironmentServiceImpl.class);
+		bind(PackagesService.class, PackagesServiceImpl.class);
 	}
 
 	/**

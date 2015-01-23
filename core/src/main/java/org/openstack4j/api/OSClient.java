@@ -6,6 +6,7 @@ import org.openstack4j.api.compute.ComputeService;
 import org.openstack4j.api.heat.HeatService;
 import org.openstack4j.api.identity.IdentityService;
 import org.openstack4j.api.image.ImageService;
+import org.openstack4j.api.murano.MuranoService;
 import org.openstack4j.api.networking.NetworkingService;
 import org.openstack4j.api.storage.BlockStorageService;
 import org.openstack4j.api.storage.ObjectStorageService;
@@ -169,4 +170,11 @@ public interface OSClient {
 	 * @return the Heat service
 	 */
 	HeatService heat();
+	
+	/**
+	 * Returns the Murano Service API
+	 * 
+	 * @return the Heat service
+	 */
+	MuranoService murano();
 }
